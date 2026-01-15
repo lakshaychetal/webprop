@@ -309,13 +309,13 @@ export const ProposalCalculator = () => {
           {/* Right Column: Pricing Summary */}
           <div className="lg:col-span-1 space-y-6 lg:sticky lg:top-24">
              <Card className="p-6 border border-gold/30 bg-[var(--card-bg)] shadow-2xl shadow-gold/5">
-                <h3 className="text-xl font-bold text-[var,--foreground] mb-6 border-b border-gray-800 pb-4">Estimated Quote</h3>
+                <h3 className="text-xl font-bold text-[var(--foreground)] mb-6 border-b border-gray-800 pb-4">Estimated Quote</h3>
                 
                 {/* Cost Breakdown */}
                 <div className="space-y-4 mb-8">
                    <div>
                       <div className="flex justify-between items-center text-sm">
-                        <span className="text-[var(--subtext)]">One-Time Costs (Agency Base)</span>
+                        <span className="text-[var(--subtext)]">Upfront Investment</span>
                         <span className="text-[var(--foreground)] font-mono">{formatCurrency(totals.oneTimeCost)}</span>
                       </div>
                       {breakdown.oneTime.length > 1 && (
@@ -327,8 +327,8 @@ export const ProposalCalculator = () => {
                    
                    <div>
                       <div className="flex justify-between items-center text-sm">
-                        <span className="text-[var(--subtext)]">Monthly Recurring (Agency Base)</span>
-                        <span className="text-[var,--foreground] font-mono">{formatCurrency(totals.recurringCost)}</span>
+                        <span className="text-[var(--subtext)]">Monthly Service Fee</span>
+                        <span className="text-[var(--foreground)] font-mono">{formatCurrency(totals.recurringCost)}</span>
                       </div>
                       {breakdown.recurring.length > 1 && (
                         <div className="text-[10px] text-[var(--subtext)] text-right font-mono mt-1">
