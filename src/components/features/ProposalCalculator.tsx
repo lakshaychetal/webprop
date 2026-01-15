@@ -33,16 +33,10 @@ export const ProposalCalculator = () => {
   const [includeAISubscription, setIncludeAISubscription] = useState(false);
   const [selectedRMSPlans, setSelectedRMSPlans] = useState<string[]>(['Base Menu System']);
   
-  // Margin State
-  const [marginPercentage, setMarginPercentage] = useState(0);
-
   // Financials State
   const [totals, setTotals] = useState({
     oneTimeCost: 0,
     recurringCost: 0,
-    totalMargin: 0,
-    finalClientOneTime: 0,
-    finalClientRecurring: 0
   });
 
   const [breakdown, setBreakdown] = useState<{ oneTime: string[], recurring: string[] }>({
@@ -105,17 +99,9 @@ export const ProposalCalculator = () => {
       }
     });
 
-    const oneTimeClient = oneTime * (1 + marginPercentage / 100);
-    const recurringClient = recurring * (1 + marginPercentage / 100);
-    
-    const totalMarginVal = (oneTimeClient - oneTime) + (recurringClient - recurring); 
-
     setTotals({
       oneTimeCost: oneTime,
       recurringCost: recurring,
-      totalMargin: totalMarginVal,
-      finalClientOneTime: oneTimeClient,
-      finalClientRecurring: recurringClient
     });
 
     setBreakdown({
@@ -123,7 +109,7 @@ export const ProposalCalculator = () => {
       recurring: recurringItems
     });
 
-  }, [include3DMenu, dishCount, includeAISubscription, selectedRMSPlans, marginPercentage]);
+  }, [include3DMenu, dishCount, includeAISubscription, selectedRMSPlans]);
 
   const formatCurrency = (val: number) => {
     return new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(val);
@@ -352,50 +338,6 @@ export const ProposalCalculator = () => {
                    </div>
                 </div>
 
-                {/* Margin Slider */}
-                <div className="bg-black/40 p-4 rounded-lg border border-[var(--card-border)] [data-theme='light']:bg-gray-100 mb-6 transition-colors">
-                   <label className="flex justify-between text-sm mb-3">
-                      <span className="text-gold">Add Your Service Margin</span>
-                      <span className="text-[var(--foreground)] font-bold">{marginPercentage}%</span>
-                   </label>
-                   <input 
-                      type="range" min="0" max="100" step="5"
-                      value={marginPercentage}
-                      onChange={(e) => setMarginPercentage(Number(e.target.value))}
-                      className="w-full accent-gold h-2 bg-gray-700 [data-theme='light']:bg-gray-300 rounded-lg appearance-none cursor-pointer"
-                   />
-                </div>
-
-                {/* Final Client Pricing */}
-                <div className="space-y-4 pt-4 border-t border-gray-800">
-                   <div className="text-center">
-                      <div className="text-xs uppercase tracking-widest text-[var(--subtext)] mb-1">Total Upfront for Client</div>
-                      <div className="text-3xl font-bold text-[var(--foreground)] font-mono">{formatCurrency(totals.finalClientOneTime)}</div>
-                      <div className="text-xs text-[var(--subtext)] mt-1">Includes Setup, Licenses & First Month/Year</div>
-                   </div>
-                   
-                   {totals.finalClientRecurring > 0 && (
-                      <div className="text-center mt-6">
-                          <div className="text-xs uppercase tracking-widest text-[var(--subtext)] mb-1">Monthly Recurring for Client</div>
-                          <div className="text-2xl font-bold text-gold font-mono">{formatCurrency(totals.finalClientRecurring)}</div>
-                      </div>
-                   )}
-
-                   <div className="mt-6 pt-6 border-t border-gray-800 flex justify-between items-center">
-                      <span className="text-[var(--subtext)]">Your Estimated Margin:</span>
-                      <span className="text-green-500 font-bold font-mono">+{formatCurrency(totals.totalMargin)}</span>
-                   </div>
-                </div>
-
-                <div className="mt-8 pt-4 border-t border-dashed border-gray-700">
-                    <div className="flex justify-between items-center text-sm">
-                      <span className="text-gray-400">Your Estimated Margin:</span>
-                      <span className="text-green-400 font-mono font-bold">
-                        {formatCurrency(totals.finalClientOneTime - totals.oneTimeCost)} (Upfront)
-                      </span>
-                    </div>
-                </div>
-                
                 <Button className="w-full mt-6" variant="primary">Generate Proposal</Button>
              </Card>
           </div>

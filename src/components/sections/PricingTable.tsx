@@ -59,8 +59,6 @@ const PricingTable = () => {
                      <span><strong>Voice-to-KOT:</strong> Direct integration sends voice orders straight to kitchen printers/screens.</span>
                   </div>
                 </div>
-                
-                <Button variant="primary" className="w-full">Initialize Pilot</Button>
               </Card>
             </div>
 
@@ -96,8 +94,6 @@ const PricingTable = () => {
                      <span><strong>QR Integration:</strong> Specific QR codes for each table/menu section.</span>
                   </div>
                 </div>
-
-                <Button variant="outline" className="w-full">View Gallery</Button>
               </Card>
             </div>
           </div>
