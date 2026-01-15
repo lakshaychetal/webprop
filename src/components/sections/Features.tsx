@@ -7,10 +7,10 @@ const Features = () => {
       icon: "🎯",
       title: "3D Menu Visualization",
       subtitle: "Photorealistic 3D Food Models",
-      description: "Give customers a true-to-life view of every dish before ordering. 4K texture quality, accurate portion sizes, and ingredient visibility.",
+      description: "Give customers a true-to-life view of every dish before ordering. 4K texture quality and ingredient visibility. Includes optimization for web and AR — (Photo shoot not included).",
       benefits: [
-        "40% increase in order confidence",
-        "Reduces food return rate",
+        "Up to 40% increase in order confidence (typical range)",
+        "Reduces food return rate significantly",
         "Works on any smartphone via WebAR"
       ],
       tech: ["GLB/USDZ Support", "Cloud CDN Hosted", "No App Required"]
@@ -19,21 +19,21 @@ const Features = () => {
       icon: "🎤",
       title: "Voice AI Concierge",
       subtitle: "Multilingual Autonomous Ordering",
-      description: "AI-powered voice assistant that understands 10+ languages, handles complex queries, and suggests perfect pairings automatically.",
+      description: "AI-powered voice assistant that supports Hindi & English (more languages rolling out). Handles complex queries and suggests perfect pairings automatically.",
       benefits: [
-        "15% smart upselling rate",
+        "Expected 15% smart upselling rate",
         "Handles peak hours seamlessly",
-        "Zero language barriers"
+        "Removes language barriers"
       ],
-      tech: ["10+ Languages", "Voice-to-KOT", "Context-Aware AI"]
+      tech: ["Hindi & English (Multi-lingual roadmap)", "Voice-to-KOT", "Context-Aware AI"]
     },
     {
       icon: "⚡",
       title: "Seamless RMS Integration",
       subtitle: "Kitchen & Delivery Automation",
-      description: "Direct integration with Kitchen Order Tickets, POS systems, and delivery platforms. Orders flow automatically without manual intervention.",
+      description: "Direct integration with Kitchen Order Tickets and POS systems. Orders flow automatically — typically measured at 50% faster order processing during pilots.",
       benefits: [
-        "50% faster order processing",
+        "Significant reduction in manual processing",
         "Zero transcription errors",
         "Real-time inventory sync"
       ],
@@ -44,7 +44,7 @@ const Features = () => {
   const techSpecs = [
     { label: "Uptime SLA", value: "99.9%" },
     { label: "Load Time", value: "<2 sec" },
-    { label: "Languages", value: "10+" },
+    { label: "Languages", value: "Hindi & English (More soon)" },
     { label: "3D Quality", value: "4K Texture" },
     { label: "AR Support", value: "iOS & Android" },
     { label: "Integration", value: "API-Based" }

@@ -19,7 +19,7 @@ const Hero = () => {
             <span className="text-gold">Next-Gen Restaurant Tech</span>
           </h1>
           <p className="text-[var(--subtext)] text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
-             Drive 20-30% revenue growth for your restaurant clients with AI Voice Ordering, 3D Menu Visualization, and seamless RMS integration — the complete tech stack for modern dining.
+             Drive a typical range of 20-30% revenue growth for your restaurant clients with AI Voice Ordering, 3D Menu Visualization, and seamless RMS integration — the complete tech stack for modern dining.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="#pricing">

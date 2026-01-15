@@ -5,9 +5,9 @@ const ValueProps = () => {
   const props = [
     {
       title: "Revenue Maximization",
-      desc: "Empower your restaurant clients to increase average order value by 15-25% through AI-powered smart upselling and visual menu engagement.",
+      desc: "Empower your restaurant clients to increase average order value by a typical range of 15-25% through AI-powered smart upselling and visual menu engagement.",
       icon: "📈",
-      stats: "+15-25% AOV"
+      stats: "+15-25% AOV (Typical)"
     },
     {
       title: "Premium Service Positioning",
@@ -17,9 +17,9 @@ const ValueProps = () => {
     },
     {
       title: "Operational Efficiency",
-      desc: "Reduce client dependency on floor staff by 40% with AI Voice ordering, self-service kiosks, and automated kitchen workflows.",
+      desc: "Measure typical 40% staff load reductions in pilot programs through AI Voice ordering and automated kitchen workflows.",
       icon: "🤖",
-      stats: "-40% Staff Load"
+      stats: "-40% Staff Load (Pilot)"
     },
     {
       title: "Brand Differentiation",
@@ -45,7 +45,7 @@ const ValueProps = () => {
           </h2>
           <p className="text-[var(--subtext)] text-lg max-w-3xl mx-auto leading-relaxed">
             Transform your restaurant clients into revenue-generating, tech-enabled dining experiences. 
-            Position yourself as the agency that delivers measurable ROI, not just marketing spend.
+            Position yourself as the agency that delivers measurable ROI (typical ranges based on pilot results).
           </p>
         </div>
 
@@ -68,16 +68,16 @@ const ValueProps = () => {
         <div className="mt-16 text-center">
           <Card className="max-w-4xl mx-auto p-8 bg-gradient-to-r from-gold/10 via-gold/5 to-gold/10 border-gold/30">
             <h3 className="text-2xl md:text-3xl font-bold text-[var(--foreground)] mb-4">
-              Help Your Clients <span className="text-gold">Increase Revenue by 20-30%</span>
+              Help Your Clients <span className="text-gold">Increase Revenue by 20-30%*</span>
             </h3>
             <p className="text-[var(--subtext)] mb-6 max-w-2xl mx-auto">
               While traditional marketing drives traffic, Dine3D technology converts that traffic into higher-value orders. 
-              It is the missing piece in your client revenue growth strategy.
+              *Typical revenue growth range measured during pilot programs.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 text-[var(--subtext)]">
                 <span className="w-2 h-2 bg-gold rounded-full"></span>
-                <span>Voice AI drives 15% upsell rate</span>
+                <span>Voice AI typical 15% upsell rate</span>
               </div>
               <div className="flex items-center gap-2 text-[var(--subtext)]">
                 <span className="w-2 h-2 bg-gold rounded-full"></span>

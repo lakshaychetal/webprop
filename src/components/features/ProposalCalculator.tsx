@@ -19,9 +19,9 @@ const AI_SUBSCRIPTION = {
   name: 'Voice AI & Autonomous Ordering',
   monthlyPrice: 2500,
   features: [
-    '10+ Languages: Handles Hindi, English, Spanish, French & more automatically.',
-    'Smart Upselling: AI suggests pairings (e.g., drinks with starters) increasing ticket size by ~15%.',
-    'Voice-to-KOT: Direct integration sends voice orders straight to kitchen printers/screens.'
+    'Hindi & English support (more languages rolling out).',
+    'Expected 15% increase in ticket size via automated upselling.',
+    'Voice-to-KOT: Direct kitchen integration to reduce errors.'
   ]
 };
 
@@ -148,12 +148,12 @@ export const ProposalCalculator = () => {
                         />
                         <div>
                         <h3 className="text-xl font-bold text-[var(--foreground)]">{MENU_3D_VISUALIZATION.name}</h3>
-                        <p className="text-sm text-gold">Immersive Digital Menu • WebAR</p>
+                        <p className="text-sm text-gold">Immersive Digital Menu • WebAR • (Photo shoot NOT included)</p>
                         </div>
                     </div>
                     <div className="text-left sm:text-right w-full sm:w-auto pt-4 sm:pt-0 border-t border-gray-800 sm:border-0">
                         <div className="text-xl text-[var(--foreground)] font-mono">{formatCurrency(MENU_3D_VISUALIZATION.pricePerItem)}<span className="text-sm text-[var(--subtext)]">/item</span></div>
-                        <div className="text-xs text-[var(--subtext)]">One-time conversion fee</div>
+                        <div className="text-xs text-[var(--subtext)] leading-tight">One-time conversion fee.<br/>Includes web & AR optimization.</div>
                     </div>
                     </div>
 
@@ -233,16 +233,9 @@ export const ProposalCalculator = () => {
                           </div>
                           <div className="text-left sm:text-right shrink-0 w-full sm:w-auto pt-4 sm:pt-0 border-t border-gray-800 sm:border-0">
                             <div className="text-gold font-mono text-lg font-bold">
-                              {plan.name === 'Base Menu System' ? (
-                                <>
-                                  <span className="text-sm block text-[var(--subtext)] font-normal">
-                                    {formatCurrency(plan.price)} + {formatCurrency(plan.annualDeploymentFee)}
-                                  </span>
-                                  {formatCurrency(plan.price + plan.annualDeploymentFee)}
-                                </>
-                              ) : (
-                                formatCurrency(plan.price)
-                              )}
+                              {plan.name === 'Base Menu System' 
+                                ? formatCurrency(25000) 
+                                : formatCurrency(plan.price)}
                             </div>
                             <div className="text-[10px] text-[var(--subtext)] leading-tight mt-1">
                               {plan.name === 'Base Menu System' 
@@ -315,7 +308,7 @@ export const ProposalCalculator = () => {
                 <div className="space-y-4 mb-8">
                    <div>
                       <div className="flex justify-between items-center text-sm">
-                        <span className="text-[var(--subtext)]">Total Cost</span>
+                        <span className="text-[var(--subtext)]">Upfront Investment</span>
                         <span className="text-[var(--foreground)] font-mono">{formatCurrency(totals.oneTimeCost)}</span>
                       </div>
                       {breakdown.oneTime.length > 1 && (
@@ -323,6 +316,9 @@ export const ProposalCalculator = () => {
                           {breakdown.oneTime.join(' + ')}
                         </div>
                       )}
+                      <div className="text-[10px] text-gold/80 text-right mt-1 italic">
+                        Includes standard annual deployment where applicable.
+                      </div>
                    </div>
                    
                    <div>
@@ -337,8 +333,6 @@ export const ProposalCalculator = () => {
                       )}
                    </div>
                 </div>
-
-                <Button className="w-full mt-6" variant="primary">Generate Proposal</Button>
              </Card>
           </div>
 

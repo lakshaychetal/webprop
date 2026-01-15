@@ -42,21 +42,21 @@ const PricingTable = () => {
                     <span className="text-4xl font-bold text-[var(--foreground)]">₹2,500</span>
                     <span className="text-gray-500">/ month</span>
                   </div>
-                  <p className="text-sm text-gray-400 mt-2">Scaleable AI Training Included</p>
+                  <p className="text-sm text-gray-400 mt-2">Scalable AI Training Included (Hindi & English)</p>
                 </div>
 
                 <div className="space-y-4 mb-8">
                   <div className="flex gap-3 text-gray-400">
                     <span className="text-gold">✦</span>
-                    <span><strong>10+ Languages:</strong> Handles Hindi, English, Spanish, French & more automatically.</span>
+                    <span><strong>Multi-lingual Support:</strong> Hindi & English available now; more languages rolling out.</span>
                   </div>
                   <div className="flex gap-3 text-gray-400">
                      <span className="text-gold">✦</span>
-                     <span><strong>Smart Upselling:</strong> AI suggests pairings (e.g., drinks with starters) increasing ticket size by ~15%.</span>
+                     <span><strong>Smart Upselling:</strong> Expected 15% increase in average ticket size through automated pairings.</span>
                   </div>
                   <div className="flex gap-3 text-gray-400">
                      <span className="text-gold">✦</span>
-                     <span><strong>Voice-to-KOT:</strong> Direct integration sends voice orders straight to kitchen printers/screens.</span>
+                     <span><strong>Voice-to-KOT:</strong> Direct integration with kitchen printers to eliminate manual entry errors.</span>
                   </div>
                 </div>
               </Card>
@@ -77,21 +77,21 @@ const PricingTable = () => {
                     <span className="text-4xl font-bold text-[var(--foreground)]">₹500</span>
                     <span className="text-gray-400">/ item</span>
                    </div>
-                  <p className="text-sm text-gray-400 mt-2">One-time conversion fee</p>
+                  <p className="text-sm text-gray-400 mt-2">One-time conversion fee — Photo shoot not included</p>
                 </div>
 
                 <div className="space-y-4 mb-8">
                   <div className="flex gap-3 text-gray-400">
                     <span className="text-white/60">✓</span>
-                    <span><strong>Photorealistic 3D:</strong> 4K texture quality models hosted on cloud.</span>
+                    <span><strong>Photorealistic 3D Models:</strong> Optimized for smooth performance on web and AR.</span>
                   </div>
                   <div className="flex gap-3 text-gray-400">
                      <span className="text-white/60">✓</span>
-                     <span><strong>WebAR Enabled:</strong> No app download required for customers.</span>
+                     <span><strong>WebAR Enabled:</strong> Zero-friction experience with no application downloads.</span>
                   </div>
                   <div className="flex gap-3 text-gray-400">
                      <span className="text-white/60">✓</span>
-                     <span><strong>QR Integration:</strong> Specific QR codes for each table/menu section.</span>
+                     <span><strong>QR Integration:</strong> Instant access via table-specific or menu-wide QR codes.</span>
                   </div>
                 </div>
               </Card>
@@ -107,12 +107,19 @@ const PricingTable = () => {
             {plansData.map((plan: any, idx) => (
               <Card key={idx} className="p-6 flex flex-col hover:border-gold transition-all transition-colors">
                 <h3 className="text-lg font-bold text-[var(--foreground)] mb-2">{plan.name}</h3>
-                <div className="text-2xl font-bold text-[var(--foreground)]/90 mb-1">₹{plan.price.toLocaleString()}</div>
-                <div className="text-xs text-[var(--subtext)] mb-2 uppercase">License Fee</div>
-                {plan.annualDeploymentFee && (
+                <div className="text-2xl font-bold text-[var(--foreground)]/90 mb-1">
+                  ₹{plan.name === 'Base Menu System' ? '25,000' : plan.price.toLocaleString()}
+                </div>
+                <div className="text-xs text-[var(--subtext)] mb-2 uppercase">
+                  {plan.name === 'Base Menu System' ? 'Combined License & Deployment' : 'License Fee'}
+                </div>
+                {plan.annualDeploymentFee && plan.name !== 'Base Menu System' && (
                    <div className="text-sm text-gold font-bold mb-4">+ ₹{plan.annualDeploymentFee.toLocaleString()}/yr deployment</div>
                 )}
-                {!plan.annualDeploymentFee && <div className="mb-4 h-5" />}
+                {plan.name === 'Base Menu System' && (
+                   <div className="text-xs text-gold font-bold mb-4 italic">Includes ₹5,000 standard annual deployment</div>
+                )}
+                {!plan.annualDeploymentFee && plan.name !== 'Base Menu System' && <div className="mb-4 h-5" />}
                 
                 <ul className="space-y-2 mb-6 flex-grow">
                   {plan.features.slice(0, 4).map((feature: any, fIdx: any) => (

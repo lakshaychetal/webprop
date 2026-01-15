@@ -66,7 +66,7 @@ const ContactForm = () => {
                     </div>
                     <div>
                         <label className="block text-sm text-[var(--subtext)] mb-2">Phone</label>
-                        <input name="phone" required type="tel" className="w-full bg-[var(--background)] border border-[var(--card-border)] rounded-lg px-4 py-3 text-[var(--foreground)] focus:border-gold focus:outline-none transition-colors" placeholder="+91 98765 43210" />
+                        <input name="phone" required type="tel" className="w-full bg-[var(--background)] border border-[var(--card-border)] rounded-lg px-4 py-3 text-[var(--foreground)] focus:border-gold focus:outline-none transition-colors" placeholder="+91 88139 47793" />
                     </div>
                 </div>
 

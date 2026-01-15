@@ -36,8 +36,8 @@ const Footer = () => {
           <div>
             <h4 className="text-[var(--foreground)] font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li>help@dine3d.com</li>
-              <li>+91 98765 43210</li>
+              <li>info@dine3d.com</li>
+              <li>+91 88139 47793</li>
             </ul>
           </div>
         </div>
