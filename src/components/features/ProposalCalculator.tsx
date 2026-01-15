@@ -138,7 +138,7 @@ export const ProposalCalculator = () => {
                 
                 {/* 3D Menu Visualization */}
                 <Card className={`p-6 border transition-all duration-300 ${include3DMenu ? 'border-gold bg-gold/5' : 'border-[var(--card-border)] bg-[var(--card-bg)]'}`}>
-                    <div className="flex justify-between items-start mb-4">
+                    <div className="flex flex-col sm:flex-row justify-between items-start gap-4 mb-4">
                     <div className="flex items-center gap-3">
                         <input 
                         type="checkbox"
@@ -151,7 +151,7 @@ export const ProposalCalculator = () => {
                         <p className="text-sm text-gold">Immersive Digital Menu • WebAR</p>
                         </div>
                     </div>
-                    <div className="text-right">
+                    <div className="text-left sm:text-right w-full sm:w-auto pt-4 sm:pt-0 border-t border-gray-800 sm:border-0">
                         <div className="text-xl text-[var(--foreground)] font-mono">{formatCurrency(MENU_3D_VISUALIZATION.pricePerItem)}<span className="text-sm text-[var(--subtext)]">/item</span></div>
                         <div className="text-xs text-[var(--subtext)]">One-time conversion fee</div>
                     </div>
@@ -198,7 +198,7 @@ export const ProposalCalculator = () => {
                       }`}
                       onClick={() => !plan.isRequired && toggleRMSPlan(plan.name)}
                     >
-                       <div className="flex items-start justify-between gap-4">
+                       <div className="flex flex-col sm:flex-row items-start justify-between gap-4">
                           <div className="flex items-start gap-3 flex-1">
                             <input 
                               type="checkbox"
@@ -209,7 +209,7 @@ export const ProposalCalculator = () => {
                               onClick={(e) => e.stopPropagation()}
                             />
                             <div className="flex-1">
-                              <div className="flex items-center gap-2 mb-1">
+                              <div className="flex flex-wrap items-center gap-2 mb-1">
                                 <span className="text-[var(--foreground)] font-bold">{plan.name}</span>
                                 {plan.isRequired && (
                                   <span className="px-2 py-0.5 text-xs font-bold bg-gold text-black rounded-full">
@@ -231,7 +231,7 @@ export const ProposalCalculator = () => {
                               </ul>
                             </div>
                           </div>
-                          <div className="text-right">
+                          <div className="text-left sm:text-right shrink-0 w-full sm:w-auto pt-4 sm:pt-0 border-t border-gray-800 sm:border-0">
                             <div className="text-gold font-mono text-lg font-bold">
                               {plan.name === 'Base Menu System' ? (
                                 <>
@@ -264,7 +264,7 @@ export const ProposalCalculator = () => {
                       }`}
                       onClick={() => setIncludeAISubscription(!includeAISubscription)}
                     >
-                       <div className="flex items-start justify-between gap-4">
+                       <div className="flex flex-col sm:flex-row items-start justify-between gap-4">
                           <div className="flex items-start gap-3 flex-1">
                             <input 
                               type="checkbox"
@@ -274,7 +274,7 @@ export const ProposalCalculator = () => {
                               onClick={(e) => e.stopPropagation()}
                             />
                             <div className="flex-1">
-                              <div className="flex items-center gap-2 mb-1">
+                              <div className="flex flex-wrap items-center gap-2 mb-1">
                                 <span className="text-[var(--foreground)] font-bold">{AI_SUBSCRIPTION.name}</span>
                                 <span className="px-2 py-0.5 text-[10px] font-bold bg-green-500/20 text-green-400 rounded-full">
                                   RECOMMENDED
@@ -294,7 +294,7 @@ export const ProposalCalculator = () => {
                               </ul>
                             </div>
                           </div>
-                          <div className="text-right">
+                          <div className="text-left sm:text-right shrink-0 w-full sm:w-auto pt-4 sm:pt-0 border-t border-gray-800 sm:border-0">
                             <div className="text-blue-400 font-mono text-lg font-bold">{formatCurrency(AI_SUBSCRIPTION.monthlyPrice)}</div>
                             <div className="text-xs text-[var(--subtext)]">per month</div>
                           </div>
@@ -315,7 +315,7 @@ export const ProposalCalculator = () => {
                 <div className="space-y-4 mb-8">
                    <div>
                       <div className="flex justify-between items-center text-sm">
-                        <span className="text-[var(--subtext)]">Upfront Investment</span>
+                        <span className="text-[var(--subtext)]">Total Cost</span>
                         <span className="text-[var(--foreground)] font-mono">{formatCurrency(totals.oneTimeCost)}</span>
                       </div>
                       {breakdown.oneTime.length > 1 && (
