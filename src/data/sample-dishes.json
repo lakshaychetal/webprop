@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Hyderabadi Biryani",
+    "price": 350,
+    "veg": false,
+    "description": "Aromatic basmati rice cooked with spices and tender pieces of mutton.",
+    "model_url": "https://modelviewer.dev/shared-assets/models/Astronaut.glb",
+    "image_url": "https://placehold.co/400x300?text=Biryani"
+  },
+  {
+    "id": 2,
+    "name": "Paneer Butter Masala",
+    "price": 280,
+    "veg": true,
+    "description": "Cottage cheese cubes in a rich, creamy tomato gravy.",
+    "model_url": "https://modelviewer.dev/shared-assets/models/Astronaut.glb",
+    "image_url": "https://placehold.co/400x300?text=Paneer"
+  },
+  {
+    "id": 3,
+    "name": "Butter Naan",
+    "price": 60,
+    "veg": true,
+    "description": "Soft and fluffy leavened bread cooked in Tandoor with butter.",
+    "model_url": "https://modelviewer.dev/shared-assets/models/Astronaut.glb",
+    "image_url": "https://placehold.co/400x300?text=Naan"
+  },
+  {
+    "id": 4,
+    "name": "Chicken Tikka",
+    "price": 320,
+    "veg": false,
+    "description": "Boneless chicken chunks marinated in yogurt and spices, grilled to perfection.",
+    "model_url": "https://modelviewer.dev/shared-assets/models/Astronaut.glb",
+    "image_url": "https://placehold.co/400x300?text=Tikka"
+  },
+  {
+    "id": 5,
+    "name": "Masala Dosa",
+    "price": 120,
+    "veg": true,
+    "description": "Crispy rice crepe filled with spiced potato masala.",
+    "model_url": "https://modelviewer.dev/shared-assets/models/Astronaut.glb",
+    "image_url": "https://placehold.co/400x300?text=Dosa"
+  },
+  {
+    "id": 6,
+    "name": "Gulab Jamun",
+    "price": 90,
+    "veg": true,
+    "description": "Deep-fried dough balls soaked in sweet sugar syrup.",
+    "model_url": "https://modelviewer.dev/shared-assets/models/Astronaut.glb",
+    "image_url": "https://placehold.co/400x300?text=GulabJamun"
+  },
+  {
+    "id": 7,
+    "name": "Tandoori Chicken",
+    "price": 450,
+    "veg": false,
+    "description": "Whole chicken marinated in yogurt and spices, roasted in Tandoor.",
+    "model_url": "https://modelviewer.dev/shared-assets/models/Astronaut.glb",
+    "image_url": "https://placehold.co/400x300?text=Tandoori"
+  },
+  {
+    "id": 8,
+    "name": "Veg Burger",
+    "price": 150,
+    "veg": true,
+    "description": "Pattie made of mixed vegetables, served in a bun with sauces.",
+    "model_url": "https://modelviewer.dev/shared-assets/models/Astronaut.glb",
+    "image_url": "https://placehold.co/400x300?text=Burger"
+  }
+]

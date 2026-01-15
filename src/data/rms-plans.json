@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Base Menu System",
+    "price": 20000,
+    "annualDeploymentFee": 5000,
+    "isRequired": true,
+    "best_for": "Essential Foundation - Required",
+    "description": "Core digital menu system - Required for all other modules. Price includes setup + annual deployment fee (Standard cost pass-through).",
+    "features": [
+      "Digital Menu Management: Add, edit, delete items",
+      "Admin Panel: Secure login, dashboard",
+      "Customer Menu View: Clean interface",
+      "Basic Reports: Total items and categories summary"
+    ]
+  },
+  {
+    "name": "Table Ordering System",
+    "price": 20000,
+    "isRequired": false,
+    "best_for": "QR-based table ordering add-on",
+    "description": "Add QR-based table ordering to your base menu system.",
+    "features": [
+      "QR Based Table Ordering",
+      "Live Order Management",
+      "Table Management",
+      "Bill and Order Summary"
+    ]
+  },
+  {
+    "name": "Chef Portal",
+    "price": 5000,
+    "isRequired": false,
+    "best_for": "Kitchen workflow management",
+    "description": "Dedicated kitchen portal for structured workflow.",
+    "features": [
+      "Dedicated Chef/Kitchen Portal",
+      "KOT (Kitchen Order Ticket) System",
+      "Chef Order Status Control",
+      "Order Priority Handling"
+    ]
+  },
+  {
+    "name": "Home Delivery System",
+    "price": 12000,
+    "isRequired": false,
+    "best_for": "Delivery ordering module",
+    "description": "Complete home delivery and order tracking system.",
+    "features": [
+      "Home Delivery Ordering",
+      "Checkout System",
+      "Delivery Order Management (Admin)",
+      "Customer Order Tracking",
+      "Delivery Zone & Charges Management"
+    ]
+  }
+]

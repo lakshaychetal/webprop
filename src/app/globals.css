@@ -1,23 +1,49 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: var(--font-inter);
+}
+
 :root {
+  --background: #000000;
+  --foreground: #ffffff;
+  --subtext: #9ca3af;
+  --card-bg: #111111;
+  --card-border: #333333;
+  --gold-gradient: linear-gradient(93.31deg, rgb(140, 97, 21) -22.19%, rgb(151, 109, 35) -17.01%, rgb(181, 142, 72) -6.02%, rgb(229, 195, 132) 8.85%, rgb(233, 199, 137) 10.15%, rgb(255, 234, 196) 25.67%, rgb(230, 185, 102) 68.35%, rgb(153, 111, 37) 107.15%);
+}
+
+[data-theme='light'] {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1a1a1a;
+  --subtext: #4b5563;
+  --card-bg: #f9f9fb;
+  --card-border: #eeeeee;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.text-gold {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
+
+.bg-gold {
+  background: var(--gold-gradient);
+}
+
+.border-gold {
+  border-image: var(--gold-gradient) 1;
+}
+
 
 body {
   background: var(--background);
