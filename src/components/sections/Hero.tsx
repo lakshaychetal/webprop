@@ -14,7 +14,7 @@ const Hero = () => {
           <div className="inline-block px-4 py-1.5 rounded-full border border-gold/30 bg-gold/10 text-gold text-sm font-semibold mb-6 tracking-wide uppercase">
             Strategic Partnership Proposal
           </div>
-          <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-8 leading-tight">
             <span className="text-[var(--foreground)] block mb-2">Empower Your Clients with</span>
             <span className="text-gold">Next-Gen Restaurant Tech</span>
           </h1>

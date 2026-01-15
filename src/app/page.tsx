@@ -8,7 +8,7 @@ import FAQ from '../components/sections/FAQ';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)] selection:bg-gold selection:text-black transition-colors">
+    <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)] selection:bg-gold selection:text-black transition-colors overflow-x-hidden">
       <Hero />
       <ValueProps />
       <Features />

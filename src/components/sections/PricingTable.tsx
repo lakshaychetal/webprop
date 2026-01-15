@@ -106,13 +106,13 @@ const PricingTable = () => {
 
         {/* SECTION 2: RMS & HARDWARE */}
         <div>
-           <h3 className="text-2xl font-bold text-[var(--foreground)] mb-8 border-l-4 border-gray-700 pl-4">II. Core Infrastructure (RMS)</h3>
+           <h3 className="text-2xl font-bold text-[var(--foreground)] mb-8 border-l-4 border-gold pl-4">II. Core Infrastructure (RMS)</h3>
            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {plansData.map((plan: any, idx) => (
-              <Card key={idx} className="p-6 flex flex-col hover:border-white/30 transition-all opacity-90 hover:opacity-100">
+              <Card key={idx} className="p-6 flex flex-col hover:border-gold transition-all transition-colors">
                 <h3 className="text-lg font-bold text-[var(--foreground)] mb-2">{plan.name}</h3>
                 <div className="text-2xl font-bold text-[var(--foreground)]/90 mb-1">₹{plan.price.toLocaleString()}</div>
-                <div className="text-xs text-gray-500 mb-2 uppercase">License Fee</div>
+                <div className="text-xs text-[var(--subtext)] mb-2 uppercase">License Fee</div>
                 {plan.annualDeploymentFee && (
                    <div className="text-sm text-gold font-bold mb-4">+ ₹{plan.annualDeploymentFee.toLocaleString()}/yr deployment</div>
                 )}
@@ -120,8 +120,8 @@ const PricingTable = () => {
                 
                 <ul className="space-y-2 mb-6 flex-grow">
                   {plan.features.slice(0, 4).map((feature: any, fIdx: any) => (
-                    <li key={fIdx} className="text-xs text-gray-400 flex items-start gap-2">
-                      <span className="text-gray-600">▪</span>
+                    <li key={fIdx} className="text-xs text-[var(--subtext)] flex items-start gap-2">
+                      <span className="text-gold">▪</span>
                       {feature}
                     </li>
                   ))}

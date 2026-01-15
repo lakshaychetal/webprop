@@ -321,7 +321,7 @@ export const ProposalCalculator = () => {
           </div>
 
           {/* Right Column: Pricing Summary */}
-          <div className="lg:col-span-1 space-y-6 sticky top-24">
+          <div className="lg:col-span-1 space-y-6 lg:sticky lg:top-24">
              <Card className="p-6 border border-gold/30 bg-[var(--card-bg)] shadow-2xl shadow-gold/5">
                 <h3 className="text-xl font-bold text-[var,--foreground] mb-6 border-b border-gray-800 pb-4">Estimated Quote</h3>
                 

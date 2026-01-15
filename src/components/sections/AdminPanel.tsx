@@ -74,18 +74,18 @@ const AdminPanel = () => {
                         Stop guessing and start growing. Our admin panel provides the transparency 
                         you need to scale your restaurant agency services.
                     </p>
-                    <div className="flex flex-wrap justify-center gap-8">
-                        <div className="text-center">
-                            <div className="text-3xl font-bold text-gold">100%</div>
-                            <div className="text-xs text-[var(--subtext)] uppercase tracking-widest mt-1">Real-time Sync</div>
+                    <div className="flex flex-wrap justify-center gap-4 md:gap-8">
+                        <div className="text-center px-4">
+                            <div className="text-2xl md:text-3xl font-bold text-gold">100%</div>
+                            <div className="text-[10px] md:text-xs text-[var(--subtext)] uppercase tracking-widest mt-1">Real-time Sync</div>
                         </div>
-                        <div className="text-center border-l border-gray-800 pl-8">
-                            <div className="text-3xl font-bold text-gold">24/7</div>
-                            <div className="text-xs text-[var(--subtext)] uppercase tracking-widest mt-1">Uptime Support</div>
+                        <div className="text-center border-[var(--card-border)] md:border-l pl-4 md:pl-8">
+                            <div className="text-2xl md:text-3xl font-bold text-gold">24/7</div>
+                            <div className="text-[10px] md:text-xs text-[var(--subtext)] uppercase tracking-widest mt-1">Uptime Support</div>
                         </div>
-                        <div className="text-center border-l border-gray-800 pl-8">
-                            <div className="text-3xl font-bold text-gold">End-to-End</div>
-                            <div className="text-xs text-[var(--subtext)] uppercase tracking-widest mt-1">Encryption</div>
+                        <div className="text-center border-[var(--card-border)] md:border-l pl-4 md:pl-8">
+                            <div className="text-2xl md:text-3xl font-bold text-gold">End-to-End</div>
+                            <div className="text-[10px] md:text-xs text-[var(--subtext)] uppercase tracking-widest mt-1">Encryption</div>
                         </div>
                     </div>
                 </div>
